@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENERG FITNESS STUDIO | Palakkad's Premium Training Facility</title>
+  <meta name="description"
+    content="Forge your ultimate physique at EnerG Fitness Studio, Palakkad. Premium equipment, expert training, and high-impact 41-day transformation cycles.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#8cc63f', // Extracted metallic copper/bronze color from logo
+              dark: '#7cb337',
+              light: '#aada70',
+              glow: 'rgba(140, 198, 63, 0.15)',
+              glowHeavy: 'rgba(140, 198, 63, 0.4)',
+            },
+            darkBg: '#000000',
+            darkSec: '#0b0b0b',
+            darkTertiary: '#141414',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Premium Styles -->
+  <style>
+    /* Grainy noise texture overlay for luxury dark theme */
+    .noise-overlay {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      opacity: 0.02;
+    }
+
+    /* Text stroke effect for aggressive header vibe */
+    .text-stroke {
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+      color: transparent;
+    }
+
+    @media (hover: hover) {
+      .hover-trigger-pc {
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .hover-trigger-pc:hover {
+        color: #ffffff !important;
+        -webkit-text-stroke: 1px #ffffff !important;
+        text-shadow: 0 0 25px rgba(255, 255, 255, 0.6), 0 0 50px rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    /* Reveal animations on scroll */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-on-scroll.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Hide scrollbar but keep functionality */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+
+<body class="bg-darkBg text-neutral-100 font-sans selection:bg-brand selection:text-darkBg overflow-x-hidden relative">
+
+  <!-- Grainy Noise Overlay -->
+  <div class="fixed inset-0 pointer-events-none noise-overlay z-50"></div>
+
+  <!-- Background Decorative Glows -->
+  <div
+    class="fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-brand/5 blur-[120px] pointer-events-none z-0">
+  </div>
+  <div
+    class="fixed bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-brand/5 blur-[120px] pointer-events-none z-0">
+  </div>
+
+  <!-- 1. HEADER & NAVIGATION -->
+  <header
+    class="fixed top-0 left-0 right-0 z-40 bg-darkBg/75 backdrop-blur-md border-b border-neutral-900 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+      <!-- Logo + Name -->
+      <a href="#" class="flex items-center gap-3 group focus:outline-none">
+        <!-- Logo Container -->
+        <div
+          class="relative w-10 h-10 rounded-lg overflow-hidden border border-brand/30 flex items-center justify-center bg-darkSec group-hover:border-brand/70 transition-colors">
+          <!-- Try to load local image. Fallback to inline SVG if it fails -->
+          <img src="enerG.jpg" alt="Logo" class="w-full h-full object-cover"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <!-- Inline Fallback SVG (Infinity icon mimicking logo monogram) -->
+          <div class="hidden absolute inset-0 items-center justify-center bg-neutral-950 text-brand">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" class="w-6 h-6">
+              <path
+                d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 1 0 0-8c-2 0-4 1.33-6 4Z" />
+            </svg>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-lg font-heading font-black tracking-wider text-white leading-none">ENER<span class="text-brand">G</span></span>
+          <span class="text-[9px] font-heading font-bold text-brand tracking-widest leading-none mt-1">FITNESS STUDIO</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav & Badge -->
+      <div class="hidden md:flex items-center gap-8">
+        <nav class="flex items-center gap-6 text-sm font-semibold tracking-wider uppercase text-neutral-400">
+          <a href="#programs" class="hover:text-white transition-colors">Programs</a>
+          <a href="#stats" class="hover:text-white transition-colors">Stats</a>
+          <a href="#transformations" class="hover:text-white transition-colors">Transformations</a>
+          <a href="#contact" class="hover:text-white transition-colors">Location</a>
+        </nav>
+
+        <!-- Live Status Badge -->
+        <div id="status-badge"
+          class="flex items-center gap-1.5 rounded-full bg-neutral-900 border border-neutral-800 px-3 py-1 text-xs font-semibold tracking-wider">
+          <span id="status-badge-dot" class="h-2 w-2 rounded-full bg-neutral-500"></span>
+          <span id="status-badge-text" class="text-neutral-300">CALCULATING...</span>
+        </div>
+      </div>
+
+      <!-- Right CTA & Burger Menu -->
+      <div class="flex items-center gap-4">
+        <!-- Join CTA -->
+        <button onclick="openModal()"
+          class="hidden sm:inline-flex items-center justify-center bg-brand hover:bg-brand-dark text-black font-heading font-extrabold text-sm uppercase px-5 py-2.5 rounded-sm tracking-wider transition-all duration-300 shadow-[0_0_15px_rgba(217,166,147,0.2)] hover:shadow-[0_0_25px_rgba(217,166,147,0.45)] hover:scale-[1.03] active:scale-95">
+          Join Now
+        </button>
+
+        <!-- Burger Icon -->
+        <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-white hover:text-brand focus:outline-none"
+          aria-label="Toggle Menu">
+          <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+            stroke="currentColor" class="w-6 h-6 transition-transform">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu"
+      class="hidden md:hidden border-t border-neutral-900 bg-black/95 backdrop-blur-xl transition-all duration-300">
+      <div class="px-4 py-6 space-y-4 flex flex-col items-start">
+        <a href="#programs" onclick="toggleMobileMenu()"
+          class="text-lg font-heading font-bold uppercase tracking-wider text-neutral-300 hover:text-brand w-full py-2">Programs</a>
+        <a href="#stats" onclick="toggleMobileMenu()"
+          class="text-lg font-heading font-bold uppercase tracking-wider text-neutral-300 hover:text-brand w-full py-2">Stats</a>
+        <a href="#transformations" onclick="toggleMobileMenu()"
+          class="text-lg font-heading font-bold uppercase tracking-wider text-neutral-300 hover:text-brand w-full py-2">Transformations</a>
+        <a href="#contact" onclick="toggleMobileMenu()"
+          class="text-lg font-heading font-bold uppercase tracking-wider text-neutral-300 hover:text-brand w-full py-2">Location
+          & Hours</a>
+
+        <!-- Live Status Badge Mobile -->
+        <div id="status-badge-mobile"
+          class="flex items-center gap-1.5 rounded-full bg-neutral-900 border border-neutral-800 px-3 py-1.5 text-xs font-semibold tracking-wider mt-2">
+          <span id="status-badge-dot-mobile" class="h-2 w-2 rounded-full bg-neutral-500"></span>
+          <span id="status-badge-text-mobile" class="text-neutral-300">CALCULATING...</span>
+        </div>
+
+        <button onclick="toggleMobileMenu(); openModal();"
+          class="w-full text-center bg-brand text-black font-heading font-black py-3 rounded-sm uppercase tracking-widest text-sm mt-4">
+          Join Now
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <!-- Background Image with High Quality moody gym atmosphere -->
+    <div class="absolute inset-0 z-0">
+      <!-- Fallback image layout + Local generated high-end gym background -->
+      <img src="hero_bg.png" alt="Gym Interior"
+        class="w-full h-full object-cover object-center opacity-40 scale-105 animate-[pulse-slow_8s_ease-in-out_infinite]"
+        onerror="this.src='https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=2070'">
+      <!-- Rich gradient overlay -->
+      <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-darkBg/60 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-darkBg via-transparent to-darkBg/30"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div
+      class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center py-20 flex flex-col items-center">
+
+      <!-- Location Badge -->
+      <div
+        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-900/90 border border-neutral-800/80 backdrop-blur-sm text-xs font-bold text-neutral-300 uppercase tracking-widest mb-6 animate-bounce">
+        <i data-lucide="map-pin" class="h-3.5 w-3.5 text-brand"></i>
+        <span>PALAKKAD, KERALA</span>
+      </div>
+
+      <!-- Main Headline (Massive, Aggressive, Uppercase) -->
+      <h1
+        class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-heading font-black tracking-tighter text-white uppercase leading-[0.9] select-none text-center">
+        <span id="limitless-text" class="block text-stroke hover-trigger-pc cursor-default">ENERG</span>
+        <span class="block text-brand drop-shadow-[0_0_35px_rgba(217,166,147,0.25)]">PASSION</span>
+      </h1>
+
+      <p
+        class="max-w-xl text-neutral-400 text-sm sm:text-base md:text-lg mt-8 font-medium leading-relaxed tracking-wide">
+        Palakkad's premier wellness and training studio. Experience high-octane workouts with custom programs, Zumba, CrossFit, and premium equipment.
+      </p>
+
+      <!-- Two Call-To-Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center gap-4 mt-10 w-full sm:w-auto">
+        <button onclick="openModal()"
+          class="w-full sm:w-auto bg-brand hover:bg-brand-dark text-black font-heading font-black uppercase text-base px-8 py-4 rounded-sm tracking-wider transition-all duration-300 shadow-[0_0_20px_rgba(217,166,147,0.3)] hover:shadow-[0_0_30px_rgba(217,166,147,0.6)] hover:scale-105 active:scale-95">
+          Start Your Transformation
+        </button>
+
+        <button onclick="openVideoModal()"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border-2 border-neutral-700 hover:border-brand bg-black/40 hover:bg-black/60 text-white font-heading font-bold uppercase text-base px-8 py-4 rounded-sm tracking-wider transition-all duration-300 hover:scale-105 active:scale-95 group">
+          <i data-lucide="play" class="h-5 w-5 text-brand group-hover:scale-110 transition-transform"></i>
+          <span>Watch Tour</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Bottom Scroll Indicator -->
+    <div
+      class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-1.5 opacity-60 z-10">
+      <span class="text-[9px] uppercase tracking-widest font-bold text-neutral-500">SCROLL DOWN</span>
+      <div class="w-[1.5px] h-8 bg-gradient-to-b from-brand to-transparent rounded-full animate-bounce"></div>
+    </div>
+  </section>
+
+  <!-- 3. QUICK STATS GRID -->
+  <section id="stats" class="relative py-16 bg-darkSec border-y border-neutral-900 overflow-hidden z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- 4-column layout desktop, collapsing into 2x2 grid mobile -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
+
+        <!-- Stat 1 -->
+        <div
+          class="flex flex-col items-center lg:items-start text-center lg:text-left p-6 rounded-lg bg-black/30 border border-neutral-900 hover:border-brand/30 transition-all duration-300 group">
+          <div class="text-4xl sm:text-5xl font-heading font-black text-white group-hover:text-brand transition-colors">
+            500+</div>
+          <div class="text-[10px] sm:text-xs font-bold text-brand uppercase tracking-widest mt-2">Active Members</div>
+        </div>
+
+        <!-- Stat 2 (Google Rating from GMap) -->
+        <div
+          class="flex flex-col items-center lg:items-start text-center lg:text-left p-6 rounded-lg bg-black/30 border border-neutral-900 hover:border-brand/30 transition-all duration-300 group">
+          <div
+            class="text-4xl sm:text-5xl font-heading font-black text-white group-hover:text-brand transition-colors flex items-center gap-1">
+            <span>5.0</span>
+            <span class="text-brand text-3xl">★</span>
+          </div>
+          <div class="text-[10px] sm:text-xs font-bold text-brand uppercase tracking-widest mt-2">42+ Google Reviews
+          </div>
+        </div>
+
+        <!-- Stat 3 -->
+        <div
+          class="flex flex-col items-center lg:items-start text-center lg:text-left p-6 rounded-lg bg-black/30 border border-neutral-900 hover:border-brand/30 transition-all duration-300 group">
+          <div class="text-4xl sm:text-5xl font-heading font-black text-white group-hover:text-brand transition-colors">
+            41d</div>
+          <div class="text-[10px] sm:text-xs font-bold text-brand uppercase tracking-widest mt-2">Transformation Cycles
+          </div>
+        </div>
+
+        <!-- Stat 4 -->
+        <div
+          class="flex flex-col items-center lg:items-start text-center lg:text-left p-6 rounded-lg bg-black/30 border border-neutral-900 hover:border-brand/30 transition-all duration-300 group">
+          <div
+            class="text-4xl sm:text-5xl font-heading font-black text-white group-hover:text-brand transition-colors flex items-center gap-2">
+            <span class="uppercase">ELITE</span>
+          </div>
+          <div class="text-[10px] sm:text-xs font-bold text-brand uppercase tracking-widest mt-2">World-Class Equipment
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. PROGRAMS SECTION ("BUILT TO BREAK CEILINGS") -->
+  <section id="programs" class="relative py-24 sm:py-32 bg-darkBg overflow-hidden z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="reveal-on-scroll max-w-3xl mb-16 sm:mb-20">
+        <!-- Horizontal Accent Line -->
+        <div class="w-12 h-1 bg-brand rounded-full mb-6"></div>
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-black tracking-tight text-white uppercase">
+          BUILT TO BREAK CEILINGS
+        </h2>
+        <p class="text-neutral-400 text-sm sm:text-base md:text-lg mt-4 leading-relaxed font-medium">
+          Ordinary routines yield ordinary outcomes. Our systemized fitness programs are engineered for high-performance
+          overload, absolute accountability, and psychological breakthrough.
+        </p>
+      </div>
+
+      <!-- Grid layout showing 6 service cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+        <!-- Card 1: Strength Training -->
+        <div
+          class="reveal-on-scroll relative group rounded-lg bg-darkSec border border-neutral-900 hover:border-brand/30 p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(217,166,147,0.05)] overflow-hidden">
+          <!-- Light Glow Hover -->
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-brand/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+
+          <!-- Icon layout utilizing brand color -->
+          <div
+            class="w-12 h-12 rounded-lg bg-neutral-900 border border-neutral-800 flex items-center justify-center text-brand mb-6 shadow-inner group-hover:border-brand/50 transition-colors">
+            <i data-lucide="dumbbell" class="h-6 w-6"></i>
+          </div>
+          <h3
+            class="text-xl font-heading font-extrabold text-white uppercase tracking-wider group-hover:text-brand transition-colors">
+            Strength Training
+          </h3>
+          <p class="text-neutral-400 text-sm mt-4 leading-relaxed">
+            Targeted compound overload designed to build absolute power, skeletal density, and lean muscular
+            hypertrophy.
+          </p>
+        </div>
+
+        <!-- Card 2: HIIT & Conditioning -->
+        <div
+          class="reveal-on-scroll relative group rounded-lg bg-darkSec border border-neutral-900 hover:border-brand/30 p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(217,166,147,0.05)] overflow-hidden">
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-brand/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+
+          <div
+            class="w-12 h-12 rounded-lg bg-neutral-900 border border-neutral-800 flex items-center justify-center text-brand mb-6 shadow-inner group-hover:border-brand/50 transition-colors">
+            <i data-lucide="zap" class="h-6 w-6"></i>
+          </div>
+          <h3
+            class="text-xl font-heading font-extrabold text-white uppercase tracking-wider group-hover:text-brand transition-colors">
+            HIIT & Conditioning
+          </h3>
+          <p class="text-neutral-400 text-sm mt-4 leading-relaxed">
+            High-output energy system protocols built to incinerate fat cells while sharpening cardiovascular capacity.
+          </p>
+        </div>
+
+        <!-- Card 3: Bodybuilding -->
+        <div
+          class="reveal-on-scroll relative group rounded-lg bg-darkSec border border-neutral-900 hover:border-brand/30 p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(217,166,147,0.05)] overflow-hidden">
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-brand/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+
+          <div
+            class="w-12 h-12 rounded-lg bg-neutral-900 border border-neutral-800 flex items-center justify-center text-brand mb-6 shadow-inner group-hover:border-brand/50 transition-colors">
+            <i data-lucide="crown" class="h-6 w-6"></i>
+          </div>
+          <h3
+            class="text-xl font-heading font-extrabold text-white uppercase tracking-wider group-hover:text-brand transition-colors">
+            Bodybuilding
+          </h3>
+          <p class="text-neutral-400 text-sm mt-4 leading-relaxed">
+            Aesthetic volume and precision muscle division targeting structural proportion, fullness, and vascularity.
+          </p>
+        </div>
+
+        <!-- Card 4: Functional Fitness -->
+        <div
+          class="reveal-on-scroll relative group rounded-lg bg-darkSec border border-neutral-900 hover:border-brand/30 p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(217,166,147,0.05)] overflow-hidden">
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-brand/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+
+          <div
+            class="w-12 h-12 rounded-lg bg-neutral-900 border border-neutral-800 flex items-center justify-center text-brand mb-6 shadow-inner group-hover:border-brand/50 transition-colors">
+            <i data-lucide="activity" class="h-6 w-6"></i>
+          </div>
+          <h3
+            class="text-xl font-heading font-extrabold text-white uppercase tracking-wider group-hover:text-brand transition-colors">
+            Functional Fitness
+          </h3>
+          <p class="text-neutral-400 text-sm mt-4 leading-relaxed">
+            Multi-joint movements engineered to improve kinetic mobility, core stability, and athletic utility in
+            everyday lifeloads.
+          </p>
+        </div>
+
+        <!-- Card 5: Personal Training -->
+        <div
+          class="reveal-on-scroll relative group rounded-lg bg-darkSec border border-neutral-900 hover:border-brand/30 p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(217,166,147,0.05)] overflow-hidden">
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-brand/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+
+          <div
+            class="w-12 h-12 rounded-lg bg-neutral-900 border border-neutral-800 flex items-center justify-center text-brand mb-6 shadow-inner group-hover:border-brand/50 transition-colors">
+            <i data-lucide="users" class="h-6 w-6"></i>
+          </div>
+          <h3
+            class="text-xl font-heading font-extrabold text-white uppercase tracking-wider group-hover:text-brand transition-colors">
+            Personal Training
+          </h3>
+          <p class="text-neutral-400 text-sm mt-4 leading-relaxed">
+            Direct access to dedicated experts for custom routines, nutrition plans, biomechanics alignment, and
+            accountability.
+          </p>
+        </div>
+
+        <!-- Card 6: Group Classes -->
+        <div
+          class="reveal-on-scroll relative group rounded-lg bg-darkSec border border-neutral-900 hover:border-brand/30 p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(217,166,147,0.05)] overflow-hidden">
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-brand/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+
+          <div
+            class="w-12 h-12 rounded-lg bg-neutral-900 border border-neutral-800 flex items-center justify-center text-brand mb-6 shadow-inner group-hover:border-brand/50 transition-colors">
+            <i data-lucide="flame" class="h-6 w-6"></i>
+          </div>
+          <h3
+            class="text-xl font-heading font-extrabold text-white uppercase tracking-wider group-hover:text-brand transition-colors">
+            Group Classes
+          </h3>
+          <p class="text-neutral-400 text-sm mt-4 leading-relaxed">
+            High-vibe, collective workouts pushing standard metrics in group dynamics with peer motivation.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 41-DAY TRANSFORMATION SECTION -->
+  <section id="transformations"
+    class="relative py-24 sm:py-32 bg-darkSec border-y border-neutral-900 overflow-hidden z-20">
+    <!-- Faint brand radial spotlight behind section -->
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] rounded-full bg-brand/5 blur-[150px] pointer-events-none z-0">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Two-column layout on desktop, stacked on mobile -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+        <!-- Column A (Copy + Testimonials) -->
+        <div class="reveal-on-scroll lg:col-span-5 flex flex-col justify-center h-full">
+          <!-- Small Accent Line -->
+          <div class="w-12 h-1 bg-brand rounded-full mb-6"></div>
+
+          <h2 class="text-4xl sm:text-5xl font-heading font-black tracking-tight text-white uppercase leading-[0.95]">
+            41-DAY TRANSFORMATIONS
+          </h2>
+
+          <p class="text-neutral-400 text-sm sm:text-base mt-6 leading-relaxed font-medium">
+            No long-winded promises. No shortcuts. Just 41 days of dedicated overload, tailored metabolic programming,
+            and pure work. We supply the absolute methodology, you supply the will.
+          </p>
+
+          <!-- Join Cohort CTA -->
+          <div class="mt-8">
+            <button onclick="openModal()"
+              class="inline-flex items-center justify-center bg-brand hover:bg-brand-dark text-black font-heading font-black uppercase text-sm px-6 py-3.5 rounded-sm tracking-wider transition-all duration-300 shadow-[0_0_15px_rgba(217,166,147,0.2)] hover:shadow-[0_0_25px_rgba(217,166,147,0.45)] hover:scale-103 active:scale-95">
+              Join the Next Cohort
+            </button>
+          </div>
+
+          <!-- Reviews Grid below Column A content -->
+          <div class="mt-14 space-y-6">
+
+            <!-- Blockquote Testimonial 1 -->
+            <blockquote
+              class="relative p-6 rounded-lg bg-black/50 border border-neutral-900/80 hover:border-brand/20 transition-all duration-300 flex flex-col justify-between">
+              <!-- Quote marks icon background -->
+              <span
+                class="absolute top-2 right-4 text-neutral-800 text-6xl font-serif select-none pointer-events-none">“</span>
+              <p class="text-neutral-200 text-sm italic relative z-10 leading-relaxed font-medium">
+                "EnerG Fitness completely shifted my mindset. The 41-day schedule is tough, but the coaching keeps
+                you focused. The metrics speak for themselves."
+              </p>
+
+              <!-- Profile Metadata Row -->
+              <div class="flex items-center gap-3 mt-4 pt-4 border-t border-neutral-900/60">
+                <!-- Avatar Initials -->
+                <div
+                  class="w-8 h-8 rounded-full bg-brand/10 border border-brand/40 text-brand text-xs font-black flex items-center justify-center font-heading">
+                  SR
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-white uppercase tracking-wider">Siddharth R.</div>
+                  <div class="text-[9px] font-semibold text-neutral-400 uppercase tracking-widest">Active Member • -9kg
+                    Fat Drop</div>
+                </div>
+              </div>
+            </blockquote>
+
+            <!-- Blockquote Testimonial 2 -->
+            <blockquote
+              class="relative p-6 rounded-lg bg-black/50 border border-neutral-900/80 hover:border-brand/20 transition-all duration-300 flex flex-col justify-between">
+              <span
+                class="absolute top-2 right-4 text-neutral-800 text-6xl font-serif select-none pointer-events-none">“</span>
+              <p class="text-neutral-200 text-sm italic relative z-10 leading-relaxed font-medium">
+                "The atmosphere is pure drive. Top-tier machinery, no useless crowded distractions, and actual elite
+                guidance. Hands down the best gym experience in Palakkad."
+              </p>
+
+              <div class="flex items-center gap-3 mt-4 pt-4 border-t border-neutral-900/60">
+                <div
+                  class="w-8 h-8 rounded-full bg-brand/10 border border-brand/40 text-brand text-xs font-black flex items-center justify-center font-heading">
+                  AM
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-white uppercase tracking-wider">Anjali M.</div>
+                  <div class="text-[9px] font-semibold text-neutral-400 uppercase tracking-widest">Gold Member •
+                    Strength +15%</div>
+                </div>
+              </div>
+            </blockquote>
+
+          </div>
+        </div>
+
+        <!-- Column B (Interactive Before/After Cards) -->
+        <div class="reveal-on-scroll lg:col-span-7">
+          <!-- 4 vertical transformation container cards (2x2 grid) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+            <!-- Card 1 -->
+            <div
+              class="relative rounded-lg overflow-hidden border border-neutral-800 hover:border-brand/40 bg-black/60 transition-all duration-500 group flex flex-col">
+              <!-- Before/After Split visual simulation -->
+              <div class="relative h-64 w-full bg-neutral-900 overflow-hidden flex items-center justify-center">
+                <!-- Fallback overlay or mock illustration -->
+                <div
+                  class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(217,166,147,0.1)_0%,transparent_100%)]">
+                </div>
+                <div class="flex w-full h-full divide-x divide-neutral-950">
+                  <div class="w-1/2 h-full relative group-hover:opacity-90 transition-opacity">
+                    <!-- Placeholder representing Before (Slightly darker filter) -->
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=600" alt="Before"
+                      class="w-full h-full object-cover filter grayscale contrast-125 brightness-75">
+                    <span
+                      class="absolute bottom-2 left-2 px-2 py-0.5 bg-black/80 border border-neutral-800 text-[10px] font-bold text-neutral-400 rounded-sm">BEFORE</span>
+                  </div>
+                  <div class="w-1/2 h-full relative">
+                    <!-- Placeholder representing After (Aggressive highlight filter) -->
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=600" alt="After"
+                      class="w-full h-full object-cover filter contrast-110 saturate-110">
+                    <span
+                      class="absolute bottom-2 right-2 px-2 py-0.5 bg-brand text-black text-[10px] font-black rounded-sm shadow-[0_0_10px_rgba(217,166,147,0.4)]">WEEK
+                      6</span>
+                  </div>
+                </div>
+                <!-- Dynamic Hover Overlay showing stats -->
+                <div
+                  class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                  <div class="text-xs font-bold text-brand uppercase tracking-widest">ROHIT K.</div>
+                  <div class="text-2xl font-heading font-black text-white mt-1">41-DAY REBUILD</div>
+                  <div class="mt-4 space-y-1 text-xs text-neutral-300 font-medium">
+                    <div>FAT REDUCTION: <span class="text-brand font-bold">-11.4kg</span></div>
+                    <div>MUSCLE ACCRUED: <span class="text-white font-bold">+3.2kg</span></div>
+                    <div>BODY FAT: <span class="text-brand font-bold">22.4% → 14.1%</span></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card Meta footer -->
+              <div class="p-4 border-t border-neutral-900 flex justify-between items-center bg-darkSec">
+                <span class="text-xs font-bold text-white uppercase tracking-wide">ROHIT K.</span>
+                <span
+                  class="text-[10px] font-semibold text-brand bg-brand/10 border border-brand/20 px-2 py-0.5 rounded-sm uppercase tracking-widest">-11.4
+                  KG</span>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="relative rounded-lg overflow-hidden border border-neutral-800 hover:border-brand/40 bg-black/60 transition-all duration-500 group flex flex-col">
+              <div class="relative h-64 w-full bg-neutral-900 overflow-hidden flex items-center justify-center">
+                <div
+                  class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(217,166,147,0.1)_0%,transparent_100%)]">
+                </div>
+                <div class="flex w-full h-full divide-x divide-neutral-950">
+                  <div class="w-1/2 h-full relative group-hover:opacity-90 transition-opacity">
+                    <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?q=80&w=600" alt="Before"
+                      class="w-full h-full object-cover filter grayscale contrast-125 brightness-75">
+                    <span
+                      class="absolute bottom-2 left-2 px-2 py-0.5 bg-black/80 border border-neutral-800 text-[10px] font-bold text-neutral-400 rounded-sm">BEFORE</span>
+                  </div>
+                  <div class="w-1/2 h-full relative">
+                    <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?q=80&w=600" alt="After"
+                      class="w-full h-full object-cover filter contrast-110 saturate-110">
+                    <span
+                      class="absolute bottom-2 right-2 px-2 py-0.5 bg-brand text-black text-[10px] font-black rounded-sm shadow-[0_0_10px_rgba(217,166,147,0.4)]">WEEK
+                      6</span>
+                  </div>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                  <div class="text-xs font-bold text-brand uppercase tracking-widest">MEERA NAIR</div>
+                  <div class="text-2xl font-heading font-black text-white mt-1">METABOLIC OVERHAUL</div>
+                  <div class="mt-4 space-y-1 text-xs text-neutral-300 font-medium">
+                    <div>FAT LOSS: <span class="text-brand font-bold">-7.8kg</span></div>
+                    <div>WAIST WIDTH: <span class="text-white font-bold">-3.5 inches</span></div>
+                    <div>STRENGTH RATIO: <span class="text-brand font-bold">+28% lift max</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4 border-t border-neutral-900 flex justify-between items-center bg-darkSec">
+                <span class="text-xs font-bold text-white uppercase tracking-wide">MEERA NAIR</span>
+                <span
+                  class="text-[10px] font-semibold text-brand bg-brand/10 border border-brand/20 px-2 py-0.5 rounded-sm uppercase tracking-widest">-7.8
+                  KG</span>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="relative rounded-lg overflow-hidden border border-neutral-800 hover:border-brand/40 bg-black/60 transition-all duration-500 group flex flex-col">
+              <div class="relative h-64 w-full bg-neutral-900 overflow-hidden flex items-center justify-center">
+                <div
+                  class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(217,166,147,0.1)_0%,transparent_100%)]">
+                </div>
+                <div class="flex w-full h-full divide-x divide-neutral-950">
+                  <div class="w-1/2 h-full relative group-hover:opacity-90 transition-opacity">
+                    <img
+                      src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Before" class="w-full h-full object-cover filter grayscale contrast-125 brightness-75">
+                    <span
+                      class="absolute bottom-2 left-2 px-2 py-0.5 bg-black/80 border border-neutral-800 text-[10px] font-bold text-neutral-400 rounded-sm">BEFORE</span>
+                  </div>
+                  <div class="w-1/2 h-full relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="After" class="w-full h-full object-cover filter contrast-110 saturate-110">
+                    <span
+                      class="absolute bottom-2 right-2 px-2 py-0.5 bg-brand text-black text-[10px] font-black rounded-sm shadow-[0_0_10px_rgba(217,166,147,0.4)]">WEEK
+                      6</span>
+                  </div>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                  <div class="text-xs font-bold text-brand uppercase tracking-widest">ARJUN P.</div>
+                  <div class="text-2xl font-heading font-black text-white mt-1">MASS ACCRETION</div>
+                  <div class="mt-4 space-y-1 text-xs text-neutral-300 font-medium">
+                    <div>LBM INCREASE: <span class="text-white font-bold">+4.5kg Muscle</span></div>
+                    <div>FAT CUT: <span class="text-brand font-bold">-3.1kg</span></div>
+                    <div>BENCH PRESS: <span class="text-white font-bold">80kg → 105kg</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4 border-t border-neutral-900 flex justify-between items-center bg-darkSec">
+                <span class="text-xs font-bold text-white uppercase tracking-wide">ARJUN P.</span>
+                <span
+                  class="text-[10px] font-semibold text-brand bg-brand/10 border border-brand/20 px-2 py-0.5 rounded-sm uppercase tracking-widest">+4.5
+                  KG MUSCLE</span>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="relative rounded-lg overflow-hidden border border-neutral-800 hover:border-brand/40 bg-black/60 transition-all duration-500 group flex flex-col">
+              <div class="relative h-64 w-full bg-neutral-900 overflow-hidden flex items-center justify-center">
+                <div
+                  class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(217,166,147,0.1)_0%,transparent_100%)]">
+                </div>
+                <div class="flex w-full h-full divide-x divide-neutral-950">
+                  <div class="w-1/2 h-full relative group-hover:opacity-90 transition-opacity">
+                    <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=600" alt="Before"
+                      class="w-full h-full object-cover filter grayscale contrast-125 brightness-75">
+                    <span
+                      class="absolute bottom-2 left-2 px-2 py-0.5 bg-black/80 border border-neutral-800 text-[10px] font-bold text-neutral-400 rounded-sm">BEFORE</span>
+                  </div>
+                  <div class="w-1/2 h-full relative">
+                    <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=600" alt="After"
+                      class="w-full h-full object-cover filter contrast-110 saturate-110">
+                    <span
+                      class="absolute bottom-2 right-2 px-2 py-0.5 bg-brand text-black text-[10px] font-black rounded-sm shadow-[0_0_10px_rgba(217,166,147,0.4)]">WEEK
+                      6</span>
+                  </div>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                  <div class="text-xs font-bold text-brand uppercase tracking-widest">DIVYA KRISHNA</div>
+                  <div class="text-2xl font-heading font-black text-white mt-1">ATHLETIC SHRED</div>
+                  <div class="mt-4 space-y-1 text-xs text-neutral-300 font-medium">
+                    <div>BODY FAT DROP: <span class="text-brand font-bold">-9.2%</span></div>
+                    <div>VO2 MAX ESTIMATE: <span class="text-white font-bold">+18%</span></div>
+                    <div>PLANK HOLD: <span class="text-brand font-bold">1:30 → 4:15 min</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4 border-t border-neutral-900 flex justify-between items-center bg-darkSec">
+                <span class="text-xs font-bold text-white uppercase tracking-wide">DIVYA KRISHNA</span>
+                <span
+                  class="text-[10px] font-semibold text-brand bg-brand/10 border border-brand/20 px-2 py-0.5 rounded-sm uppercase tracking-widest">-9.2%
+                  FAT</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. INFORMATION SECTION (GMap listing values) -->
+  <section id="contact" class="relative py-24 sm:py-32 bg-darkBg overflow-hidden z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+
+        <!-- Address & Info details Column -->
+        <div class="lg:col-span-5 flex flex-col justify-center reveal-on-scroll">
+          <div class="w-12 h-1 bg-brand rounded-full mb-6"></div>
+          <h2 class="text-4xl font-heading font-black tracking-tight text-white uppercase leading-[0.95] mb-8">
+            HEADQUARTERS & HOURS
+          </h2>
+
+          <div class="space-y-6">
+            <!-- Full Address -->
+            <div class="flex items-start gap-4">
+              <div
+                class="w-10 h-10 rounded-lg bg-neutral-900 border border-neutral-800 flex items-center justify-center text-brand shrink-0">
+                <i data-lucide="map-pin" class="h-5 w-5"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-1">Our Location</h4>
+                <p class="text-neutral-400 text-sm leading-relaxed font-semibold">
+                  Amrutha Arcade, 135/3, Opposite Dane Diagnostics, Kadamkod, Manapullikavu, Palakkad - 678013
+                </p>
+                <a href="https://maps.google.com/?q=EnerG+Fitness+Studio+Palakkad" target="_blank"
+                  class="inline-flex items-center gap-1 text-xs text-brand font-bold uppercase tracking-wider mt-2 group">
+                  <span>Get Directions</span>
+                  <i data-lucide="arrow-up-right"
+                    class="h-3 w-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Schedule -->
+            <div class="flex items-start gap-4">
+              <div
+                class="w-10 h-10 rounded-lg bg-neutral-900 border border-neutral-800 flex items-center justify-center text-brand shrink-0">
+                <i data-lucide="clock" class="h-5 w-5"></i>
+              </div>
+              <div class="w-full">
+                <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-2">Operating Hours</h4>
+                <div class="grid grid-cols-2 gap-y-1.5 text-xs text-neutral-400 font-semibold max-w-sm">
+                  <div>Monday - Friday:</div>
+                  <div class="text-white text-right">5:30 AM - 12:30 PM<br>4:00 PM - 7:30 PM</div>
+
+                  <div class="pt-1.5">Saturday:</div>
+                  <div class="text-white text-right pt-1.5">4:00 PM - 7:30 PM</div>
+
+                  <div class="pt-1.5">Sunday:</div>
+                  <div class="text-rose-400 text-right pt-1.5">CLOSED</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Google Ratings Summary -->
+            <div class="flex items-start gap-4 pt-4 border-t border-neutral-900">
+              <div
+                class="w-10 h-10 rounded-lg bg-neutral-900 border border-neutral-800 flex items-center justify-center text-brand shrink-0">
+                <i data-lucide="award" class="h-5 w-5"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-1">Google Listing Reputation</h4>
+                <div class="flex items-center gap-2">
+                  <span class="text-xl font-heading font-black text-white">5.0 ★</span>
+                  <span class="text-xs text-neutral-500 font-semibold">(42 Verified GMap Reviews)</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Simulated Map Mockup Column -->
+        <div class="lg:col-span-7 reveal-on-scroll">
+          <div
+            class="relative w-full h-96 rounded-lg overflow-hidden border border-neutral-800 bg-neutral-950/40 group hover:border-brand/40 transition-colors">
+            <!-- Simulated premium map graphic -->
+            <div class="absolute inset-0 bg-neutral-950 flex flex-col items-center justify-center p-8 text-center">
+              <div
+                class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,rgba(217,166,147,0.15)_0%,transparent_80%)]">
+              </div>
+              <!-- Simulated map grid lines with CSS -->
+              <div
+                class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:32px_32px]">
+              </div>
+
+              <!-- Map pin pulse visual -->
+              <div class="relative z-10 flex flex-col items-center justify-center">
+                <div class="absolute w-20 h-20 rounded-full bg-brand/10 animate-ping border border-brand/20"></div>
+                <div
+                  class="relative w-12 h-12 rounded-full bg-brand text-black flex items-center justify-center shadow-[0_0_25px_rgba(217,166,147,0.6)]">
+                  <i data-lucide="map-pin" class="h-6 w-6"></i>
+                </div>
+                <div class="mt-6 text-sm font-bold text-white uppercase tracking-widest">ENERG FITNESS STUDIO</div>
+                <div class="text-[10px] text-neutral-400 mt-1 uppercase font-semibold tracking-wider">Manapullikavu, Palakkad</div>
+              </div>
+
+              <!-- Get Directions Overlay Link Button -->
+              <a href="https://maps.google.com/?q=EnerG+Fitness+Studio+Palakkad" target="_blank"
+                class="absolute bottom-6 bg-neutral-900 border border-neutral-800 hover:border-brand text-white px-5 py-2.5 rounded-sm text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-105 flex items-center gap-2">
+                <i data-lucide="navigation" class="h-4 w-4 text-brand"></i>
+                <span>Open in Google Maps</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer
+    class="bg-darkSec border-t border-neutral-900 py-16 text-center text-xs text-neutral-500 font-medium relative z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+
+      <!-- Left side branding -->
+      <div class="flex items-center gap-3">
+        <div class="flex flex-col text-left">
+          <span class="text-sm font-heading font-black tracking-wider text-white">ENERG FITNESS STUDIO</span>
+          <span class="text-[9px] font-bold text-brand uppercase tracking-widest mt-0.5">Palakkad, Kerala</span>
+        </div>
+      </div>
+
+      <!-- Center text -->
+      <div>
+        <p>&copy; 2026 ENERG FITNESS STUDIO. All Rights Reserved. Custom Dark Luxury Fitness Experience.</p>
+      </div>
+
+      <!-- Socials / Back to top -->
+      <div class="flex gap-4">
+        <a href="#programs" class="hover:text-white transition-colors">Programs</a>
+        <span class="text-neutral-800">•</span>
+        <a href="#transformations" class="hover:text-white transition-colors">Transformations</a>
+        <span class="text-neutral-800">•</span>
+        <a href="#" class="hover:text-white transition-colors">Back to top ↑</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- DYNAMIC POPUP MODAL: TRANSFORM REGISTRATION -->
+  <div id="join-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
+    <div
+      class="relative w-full max-w-md mx-4 p-8 rounded-lg bg-neutral-950 border border-neutral-800 shadow-[0_0_50px_rgba(217,166,147,0.15)] flex flex-col">
+      <!-- Close button -->
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-neutral-400 hover:text-white p-2">
+        <i data-lucide="x" class="h-6 w-6"></i>
+      </button>
+
+      <div class="mb-6">
+        <div class="w-10 h-1 bg-brand rounded-full mb-4"></div>
+        <h3 class="text-2xl font-heading font-black text-white uppercase tracking-wide">SECURE YOUR SPOT</h3>
+        <p class="text-xs text-neutral-400 mt-1 leading-relaxed">
+          Submit your details to receive cohort information and lock in your consultation slot.
+        </p>
+      </div>
+
+      <!-- Registration Form -->
+      <form id="join-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+        <div>
+          <label for="name" class="block text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-1.5">FULL
+            NAME</label>
+          <input type="text" id="name" required
+            class="w-full bg-neutral-900 border border-neutral-800 focus:border-brand/60 rounded-sm px-4 py-3 text-sm text-white focus:outline-none transition-colors"
+            placeholder="John Doe">
+        </div>
+
+        <div>
+          <label for="phone" class="block text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-1.5">PHONE
+            NUMBER</label>
+          <input type="tel" id="phone" required
+            class="w-full bg-neutral-900 border border-neutral-800 focus:border-brand/60 rounded-sm px-4 py-3 text-sm text-white focus:outline-none transition-colors"
+            placeholder="+91 XXXXX XXXXX">
+        </div>
+
+        <div>
+          <label for="goal" class="block text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-1.5">YOUR
+            PRIMARY FITNESS GOAL</label>
+          <select id="goal" required
+            class="w-full bg-neutral-900 border border-neutral-800 focus:border-brand/60 rounded-sm px-4 py-3 text-sm text-white focus:outline-none transition-colors">
+            <option value="" disabled selected class="text-neutral-500">Select Goal</option>
+            <option value="Fat Drop">Fat Drop & Shredding</option>
+            <option value="Muscle Accretion">Muscle Accretion & Hypertrophy</option>
+            <option value="Absolute Strength">Absolute Strength & Compound Power</option>
+            <option value="Conditioning">HIIT & Cardiovascular Capacity</option>
+          </select>
+        </div>
+
+        <button type="submit"
+          class="w-full bg-brand hover:bg-brand-dark text-black font-heading font-black py-4 rounded-sm uppercase tracking-widest text-sm transition-all duration-300 shadow-[0_0_15px_rgba(217,166,147,0.2)] mt-2">
+          SUBMIT REGISTRATION
+        </button>
+      </form>
+
+      <!-- Success Screen State -->
+      <div id="form-success" class="hidden flex flex-col items-center justify-center py-10 text-center">
+        <div
+          class="w-16 h-16 rounded-full bg-brand/10 border border-brand/50 flex items-center justify-center text-brand mb-6 animate-bounce">
+          <i data-lucide="check" class="h-8 w-8"></i>
+        </div>
+        <h4 class="text-xl font-heading font-black text-white uppercase tracking-wider">REGISTRATION RECEIVED</h4>
+        <p class="text-xs text-neutral-400 mt-2 max-w-xs mx-auto leading-relaxed">
+          Spot registered successfully. A Performance Advisor will reach out via call/WhatsApp within 12 hours.
+        </p>
+        <button onclick="closeModal()"
+          class="mt-8 border border-neutral-800 hover:border-neutral-600 text-neutral-400 hover:text-white text-xs font-bold uppercase tracking-widest px-6 py-2.5 rounded-sm transition-colors">
+          CLOSE WINDOW
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- VIDEO PLAYER TOUR MODAL -->
+  <div id="video-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
+    <div
+      class="relative w-full max-w-4xl mx-4 aspect-video rounded-lg overflow-hidden border border-neutral-800 shadow-[0_0_50px_rgba(217,166,147,0.2)]">
+      <!-- Close button -->
+      <button onclick="closeVideoModal()"
+        class="absolute top-4 right-4 z-10 text-white bg-black/60 hover:bg-black/90 p-2.5 rounded-full transition-colors">
+        <i data-lucide="x" class="h-5 w-5"></i>
+      </button>
+
+      <!-- Simulated Cinematic Video Tour Player -->
+      <div class="absolute inset-0 bg-neutral-950 flex flex-col items-center justify-center p-8 text-center">
+        <!-- Faux video loop backdrop using dark overlay over gym visual -->
+        <img src="hero_bg.png" alt="Tour Thumbnail"
+          class="absolute inset-0 w-full h-full object-cover opacity-35 filter brightness-50">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/80"></div>
+
+        <!-- Video controls indicator simulation -->
+        <div class="relative z-10 flex flex-col items-center max-w-md">
+          <div
+            class="w-16 h-16 rounded-full bg-brand text-black flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(217,166,147,0.5)] animate-pulse">
+            <i data-lucide="play" class="h-8 w-8 fill-current ml-1"></i>
+          </div>
+          <h3 class="text-2xl font-heading font-black text-white uppercase tracking-wider">ENERG FITNESS TOUR</h3>
+          <p class="text-xs text-neutral-400 mt-2 leading-relaxed">
+            Experience the premium biomechanics, high-performance coaching vibe, and complete facility walkthrough in
+            Palakkad.
+          </p>
+          <div class="mt-6 text-[10px] text-brand/75 uppercase tracking-widest font-black flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-ping"></span>
+            <span>STREAMING CINEMATIC TOUR PREVIEW</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lucide Icons & Functionalities Script -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const icon = document.getElementById('menu-icon');
+
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />';
+      } else {
+        menu.classList.add('hidden');
+        icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />';
+      }
+    }
+
+    // Modal Control: Spots Register
+    function openModal() {
+      const modal = document.getElementById('join-modal');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = 'hidden'; // Lock body scroll
+
+      // Reset Form State
+      document.getElementById('join-form').classList.remove('hidden');
+      document.getElementById('form-success').classList.add('hidden');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('join-modal');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = ''; // Unlock body scroll
+    }
+
+    // Modal Control: Video Tour
+    function openVideoModal() {
+      const modal = document.getElementById('video-modal');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('video-modal');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = '';
+    }
+
+    // Form Submit handling simulation
+    function handleFormSubmit(event) {
+      event.preventDefault();
+
+      // Animate transition to success view
+      document.getElementById('join-form').classList.add('hidden');
+      const successEl = document.getElementById('form-success');
+      successEl.classList.remove('hidden');
+
+      // Trigger new icons render for success checkmark
+      lucide.createIcons();
+    }
+
+    // Real-Time GMap Operating Hours Badge Status Updater
+    function updateStatusBadge() {
+      const now = new Date();
+      const day = now.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const timeVal = hours + minutes / 60;
+
+      let isOpen = false;
+      let nextStatus = '';
+
+      if (day >= 1 && day <= 5) {
+        // Mon-Fri: 5:30 AM - 12:30 PM, 4:00 PM - 7:30 PM
+        if ((timeVal >= 5.5 && timeVal < 12.5) || (timeVal >= 16 && timeVal < 19.5)) {
+          isOpen = true;
+          nextStatus = "Closes at " + (timeVal < 12.5 ? "12:30 PM" : "7:30 PM");
+        } else {
+          if (timeVal < 5.5) nextStatus = "Opens at 5:30 AM";
+          else if (timeVal < 16) nextStatus = "Opens at 4:00 PM";
+          else nextStatus = "Opens tomorrow at 5:30 AM";
+        }
+      } else if (day === 6) {
+        // Sat: 4:00 PM - 7:30 PM
+        if (timeVal >= 16 && timeVal < 19.5) {
+          isOpen = true;
+          nextStatus = "Closes at 7:30 PM";
+        } else {
+          if (timeVal < 16) nextStatus = "Opens at 4:00 PM";
+          else nextStatus = "Opens Monday at 5:30 AM";
+        }
+      } else {
+        // Sun: Closed
+        nextStatus = "Opens Monday at 5:30 AM";
+      }
+
+      // Update Desktop elements
+      const badgeEl = document.getElementById('status-badge');
+      const badgeDot = document.getElementById('status-badge-dot');
+      const badgeText = document.getElementById('status-badge-text');
+
+      if (badgeEl && badgeDot && badgeText) {
+        if (isOpen) {
+          badgeDot.className = "h-2 w-2 rounded-full bg-emerald-500 animate-pulse";
+          badgeText.innerHTML = `OPEN NOW <span class="text-neutral-400 font-normal ml-1">(${nextStatus})</span>`;
+          badgeEl.className = "flex items-center gap-1.5 rounded-full bg-emerald-950/40 border border-emerald-500/30 px-3 py-1 text-[10px] font-semibold text-emerald-400 tracking-wider";
+        } else {
+          badgeDot.className = "h-2 w-2 rounded-full bg-rose-500";
+          badgeText.innerHTML = `CLOSED <span class="text-neutral-400 font-normal ml-1">(${nextStatus})</span>`;
+          badgeEl.className = "flex items-center gap-1.5 rounded-full bg-rose-950/40 border border-rose-500/30 px-3 py-1 text-[10px] font-semibold text-rose-400 tracking-wider";
+        }
+      }
+
+      // Update Mobile elements
+      const badgeElMob = document.getElementById('status-badge-mobile');
+      const badgeDotMob = document.getElementById('status-badge-dot-mobile');
+      const badgeTextMob = document.getElementById('status-badge-text-mobile');
+
+      if (badgeElMob && badgeDotMob && badgeTextMob) {
+        if (isOpen) {
+          badgeDotMob.className = "h-2 w-2 rounded-full bg-emerald-500 animate-pulse";
+          badgeTextMob.innerHTML = `OPEN NOW <span class="text-neutral-400 font-normal ml-1">(${nextStatus})</span>`;
+          badgeElMob.className = "flex items-center gap-1.5 rounded-full bg-emerald-950/40 border border-emerald-500/30 px-3 py-1.5 text-[10px] font-semibold text-emerald-400 tracking-wider mt-2";
+        } else {
+          badgeDotMob.className = "h-2 w-2 rounded-full bg-rose-500";
+          badgeTextMob.innerHTML = `CLOSED <span class="text-neutral-400 font-normal ml-1">(${nextStatus})</span>`;
+          badgeElMob.className = "flex items-center gap-1.5 rounded-full bg-rose-950/40 border border-rose-500/30 px-3 py-1.5 text-[10px] font-semibold text-rose-400 tracking-wider mt-2";
+        }
+      }
+    }
+
+    // Call badge initial status updater
+    updateStatusBadge();
+    // Update status badge every 30 seconds
+    setInterval(updateStatusBadge, 30000);
+
+    // Intersection Observer for Premium Reveal-on-Scroll animations
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target); // Trigger only once
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px" // Trigger slightly before element enters viewport
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Dynamic Header backdrop transition on scroll
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.remove('bg-darkBg/75');
+        header.classList.add('bg-black/90', 'shadow-md', 'py-1');
+      } else {
+        header.classList.remove('bg-black/90', 'shadow-md', 'py-1');
+        header.classList.add('bg-darkBg/75');
+      }
+    });
+
+    // Ununiform electricity cut / flicker effect for "ENERG" text on mobile/touch screens
+    const limitlessText = document.getElementById('limitless-text');
+
+    function runFlickerSequence() {
+      // Check if current device supports hover (PC) or is touch/mobile
+      const isTouch = window.matchMedia('(hover: none)').matches || window.innerWidth < 768;
+
+      if (!isTouch) {
+        // Clear active styles if resizing to PC/desktop
+        limitlessText.style.color = '';
+        limitlessText.style.webkitTextStroke = '';
+        limitlessText.style.textShadow = '';
+        setTimeout(runFlickerSequence, 2000);
+        return;
+      }
+
+      // Random delay before the next flicker burst starts (2 to 7 seconds)
+      const nextSequenceDelay = Math.random() * 5000 + 2000;
+
+      // Rapid flicker burst count (3 to 6 sudden blinks)
+      const burstCount = Math.floor(Math.random() * 4) + 3;
+      let currentFlicker = 0;
+
+      function flicker() {
+        if (currentFlicker >= burstCount) {
+          // End of sequence, restore to transparent outline state
+          limitlessText.style.color = 'transparent';
+          limitlessText.style.webkitTextStroke = '1px rgba(255, 255, 255, 0.15)';
+          limitlessText.style.textShadow = '';
+          setTimeout(runFlickerSequence, nextSequenceDelay);
+          return;
+        }
+
+        // Turn ON: white text with strong neon glow
+        limitlessText.style.color = '#ffffff';
+        limitlessText.style.webkitTextStroke = '1px #ffffff';
+        limitlessText.style.textShadow = '0 0 20px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.3)';
+
+        // Turn OFF after a very short random duration (e.g., 30ms to 120ms)
+        setTimeout(() => {
+          limitlessText.style.color = 'transparent';
+          limitlessText.style.webkitTextStroke = '1px rgba(255, 255, 255, 0.05)'; // almost black out
+          limitlessText.style.textShadow = 'none';
+
+          currentFlicker++;
+
+          // Time before the next blink in the same burst (50ms to 250ms)
+          setTimeout(flicker, Math.random() * 200 + 50);
+        }, Math.random() * 90 + 30);
+      }
+
+      flicker();
+    }
+
+    // Start flicker sequence after a short initial delay
+    setTimeout(runFlickerSequence, 1500);
+  </script>
+</body>
+
+</html>
